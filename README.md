@@ -24,7 +24,7 @@ You need to provide 3 pieces of information as environment variables to create y
 
 **Cloudflare e-mail address**
 
-This one you probably know by eart :)
+This one you probably know by heart :)
 
 **The Domain to be updated**
 
