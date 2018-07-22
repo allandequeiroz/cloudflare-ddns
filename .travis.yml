@@ -22,3 +22,4 @@ env:
   matrix:
   - DOCKER_TAG=arm       DOCKER_ARCH=arm       LATEST=true
   - DOCKER_TAG=amd64     DOCKER_ARCH=amd64
+  
