@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+  ddns:
+    image: allandequeiroz/lab-ddns
+    environment:
+      - CLOUDFLARE_API_KEY: ${CLOUDFLARE_API_KEY}
+      - CLOUDFLARE_API_EMAIL: ${CLOUDFLARE_API_EMAIL}
+      - CLOUDFLARE_API_DOMAIN: ${CLOUDFLARE_API_DOMAIN}

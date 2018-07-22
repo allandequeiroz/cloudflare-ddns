@@ -1,0 +1,24 @@
+sudo: required
+
+services:
+- docker
+
+script:
+# setup QEMU
+- docker run --rm --privileged multiarch/qemu-user-static:register --reset
+# build images
+- docker build -t ddns:$DOCKER_TAG -f Dockerfile.$DOCKER_ARCH .
+# push images
+- docker login -u="$DOCKER_HUB_LOGIN" -p="$DOCKER_HUB_PASSWORD"
+- docker tag ddns:$DOCKER_TAG allandequeiroz/cloudflare-ddns:$DOCKER_TAG
+- docker push allandequeiroz/cloudflare-ddns:$DOCKER_TAG
+- >
+  if [ "$LATEST" == "true" ]; then
+    docker tag ddns:$DOCKER_TAG allandequeiroz/cloudflare-ddns:latest
+    docker push allandequeiroz/cloudflare-ddns:latest
+  fi
+
+env:
+  matrix:
+  - DOCKER_TAG=arm       DOCKER_ARCH=arm       LATEST=true
+  - DOCKER_TAG=amd64     DOCKER_ARCH=amd64
