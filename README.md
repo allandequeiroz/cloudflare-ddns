@@ -9,8 +9,6 @@
 
 # Cloudflare DDNS
 
-![MacDown logo](https://lh3.googleusercontent.com/3BZ7RYXPp-OdCi2Ik0qXmZbUA391Lqp5axhILoEJxFon2hE1qQu2dv4bTjuggaqrbKwe8BXmH10HPg=w1920-h1006)
-
 Please, help yourself using this Docker image to update your dynamic domain ip address on Cloudflare registries.
 
 ## How to use
