@@ -39,6 +39,19 @@ __* You can have a look at [Docker Secrets](https://docs.docker.com/engine/refer
 
 ## How to use
 
-From this point, you just need to start your container.
+From this point, you just need to start your container, a sample of a `docker-compose.yaml` would look like
 
-`docker-compose up -d`
+```
+version: '3.2'
+
+services:
+  ddns:
+    image: allandequeiroz/cloudflare-ddns
+    restart: always
+    environment:
+      - CLOUDFLARE_API_KEY: ${CLOUDFLARE_API_KEY}
+      - CLOUDFLARE_API_EMAIL: ${CLOUDFLARE_API_EMAIL}
+      - CLOUDFLARE_API_DOMAIN: ${CLOUDFLARE_API_DOMAIN}
+```
+
+Now on your terminal, `docker-compose up -d`
