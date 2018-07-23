@@ -26,15 +26,13 @@ You need to provide 3 pieces of information as environment variables to create a
 ### 3. The Domain to be updated
 
 Assuming that you're planning to use [Docker Compose](https://docs.docker.com/compose/), you could simply create a ***.env*** file providing the information above as property values, eg:
-__
-__
+
 ```
 CLOUDFLARE_API_KEY='your Cloudflare API key'
 CLOUDFLARE_API_EMAIL='your Cloudflare e-mail address'
 CLOUDFLARE_API_DOMAIN='your domain address'
 ```    
-__
-__
+
 __* The `.env` file must be at the same level as your `docker-compose.yaml` file unless you have an `env_file` section on your `docker-compose.yaml`__. [The “env_file” configuration option](https://docs.docker.com/compose/environment-variables/#pass-environment-variables-to-containers)
 
 __* You can have a look at [Docker Secrets](https://docs.docker.com/engine/reference/commandline/secret/) if you're looking for an alternative way to provide your details.__
