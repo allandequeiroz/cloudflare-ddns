@@ -9,35 +9,38 @@
 
 # Cloudflare DDNS
 
-Please, help yourself using this Docker image to update your dynamic domain IP address on Cloudflare registries.
+Dockerized way to update Cloudflare domain IP address periodically.
 
-## How to use
+## How to set it up
 
-You need to provide 3 pieces of information as environment variables to create your container.
+You need to provide 3 pieces of information as environment variables to create a container.
 
-**Cloudflare API key**
+### 1. Cloudflare API key
 
-1. Login to the Cloudflare account.
-2. Go to My Profile.
-3. Scroll down to API Keys and locate Global API Key.
-4. Click API Key to see your API identifier.
+* Login to the Cloudflare account.
+* Go to My Profile.
+* Scroll down to API Keys and locate Global API Key.
+* Click API Key to see your API identifier.
 
-**Cloudflare e-mail address**
+### 2. Cloudflare e-mail address
+### 3. The Domain to be updated
 
-This one you probably know by heart :)
-
-**The Domain to be updated**
-
-I'll assume that you're planning to use [Docker Compose](https://docs.docker.com/compose/). In this case, you could simply replace the existing ***.env*** file with your own one providing the information above, eg:
-
+Assuming that you're planning to use [Docker Compose](https://docs.docker.com/compose/), you could simply create a ***.env*** file providing the information above as property values, eg:
+__
+__
 ```
 CLOUDFLARE_API_KEY='your Cloudflare API key'
 CLOUDFLARE_API_EMAIL='your Cloudflare e-mail address'
 CLOUDFLARE_API_DOMAIN='your domain address'
-```
+```    
+__
+__
+__* The `.env` file must be at the same level as your `docker-compose.yaml` file unless you have an `env_file` section on your `docker-compose.yaml`__. [The “env_file” configuration option](https://docs.docker.com/compose/environment-variables/#pass-environment-variables-to-containers)
 
-You can have a look at [Docker Secrets](https://docs.docker.com/engine/reference/commandline/secret/) if you're looking for an alternative way to keep your information.
+__* You can have a look at [Docker Secrets](https://docs.docker.com/engine/reference/commandline/secret/) if you're looking for an alternative way to provide your details.__
 
-Now you just need to start your container.
+## How to use
+
+From this point, you just need to start your container.
 
 `docker-compose up -d`
