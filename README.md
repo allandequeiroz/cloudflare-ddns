@@ -28,9 +28,9 @@ You need to provide 3 pieces of information as environment variables to create a
 Assuming that you're planning to use [Docker Compose](https://docs.docker.com/compose/), you could simply create a ***.env*** file providing the information above as property values, eg:
 
 ```
-CLOUDFLARE_API_KEY='your Cloudflare API key'
-CLOUDFLARE_API_EMAIL='your Cloudflare e-mail address'
-CLOUDFLARE_API_DOMAIN='your domain address'
+CLOUDFLARE_API_KEY=your Cloudflare API key
+CLOUDFLARE_API_EMAIL=your Cloudflare e-mail address
+CLOUDFLARE_API_DOMAIN=your domain address
 ```    
 
 __* The `.env` file must be at the same level as your `docker-compose.yaml` file unless you have an `env_file` section on your `docker-compose.yaml`__. [The “env_file” configuration option](https://docs.docker.com/compose/environment-variables/#pass-environment-variables-to-containers)
@@ -49,9 +49,9 @@ services:
     image: allandequeiroz/cloudflare-ddns
     restart: always
     environment:
-      - CLOUDFLARE_API_KEY: ${CLOUDFLARE_API_KEY}
-      - CLOUDFLARE_API_EMAIL: ${CLOUDFLARE_API_EMAIL}
-      - CLOUDFLARE_API_DOMAIN: ${CLOUDFLARE_API_DOMAIN}
+      - CLOUDFLARE_API_KEY=${CLOUDFLARE_API_KEY}
+      - CLOUDFLARE_API_EMAIL=${CLOUDFLARE_API_EMAIL}
+      - CLOUDFLARE_API_DOMAIN=${CLOUDFLARE_API_DOMAIN}
 ```
 
 Now on your terminal, `docker-compose up -d`
