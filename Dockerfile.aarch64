@@ -2,11 +2,6 @@ FROM aarch64/debian
 
 MAINTAINER Allan de Queiroz <allandequeiroz@gmail.com>
 
-# Fix repo list
-SHELL ["/bin/bash", "-c"]
-RUN sed -i -e 's/security.debian.org/deb.debian.org\/debian/' /etc/apt/sources.list
-RUN sed -i -e 's/jessie\//jessie-/g' /etc/apt/sources.list
-
 # Install dependencies
 RUN apt-get update
 RUN apt-get install vim curl cron python2.7-dev python-pip -y
@@ -18,6 +13,7 @@ RUN pip install pyyaml
 RUN mkdir -p /root/ddns
 COPY ./conf/cloudflare_ddns.py /root/ddns
 COPY ./conf/root /var/spool/cron/crontabs/
+COPY ./conf/sources.list /etc/apt/sources.list
 RUN chmod 0600 /var/spool/cron/crontabs/root
 CMD /usr/sbin/cron -f
 
