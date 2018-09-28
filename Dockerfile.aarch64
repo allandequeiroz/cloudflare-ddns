@@ -3,6 +3,7 @@ FROM aarch64/debian
 MAINTAINER Allan de Queiroz <allandequeiroz@gmail.com>
 
 # Fix repo list
+SHELL ["/bin/bash", "-c"]
 RUN sed -i -e 's/security.debian.org/deb.debian.org\/debian/' /etc/apt/sources.list
 RUN sed -i -e 's/jessie\//jessie-/g' /etc/apt/sources.list
 
