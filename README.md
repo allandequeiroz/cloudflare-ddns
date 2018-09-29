@@ -1,11 +1,11 @@
 
 [![Travis](https://api.travis-ci.org/allandequeiroz/cloudflare-ddns.svg)](https://travis-ci.org/allandequeiroz/cloudflare-ddns)
 
-[![](https://images.microbadger.com/badges/version/allandequeiroz/cloudflare-ddns.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/allandequeiroz/cloudflare-ddns.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/allandequeiroz/cloudflare-ddns:arm.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns:arm "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/allandequeiroz/cloudflare-ddns:arm.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns:arm "Get your own version badge on microbadger.com")
 
-[![](https://images.microbadger.com/badges/version/allandequeiroz/cloudflare-ddns:amd64.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns:amd64 "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/allandequeiroz/cloudflare-ddns:amd64.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns:amd64 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/allandequeiroz/cloudflare-ddns:amd64.svg)](https://microbadger.com/images/allandequeiroz/cloudflare-ddns:amd64 "Get your own version badge on microbadger.com")
 
 # Cloudflare DDNS
 
