@@ -24,7 +24,6 @@ script:
 
 env:
   matrix:
-  - DOCKER_TAG=arm       DOCKER_ARCH=arm    
-  - DOCKER_TAG=arm64v8   DOCKER_ARCH=arm64v8       
+  - DOCKER_TAG=arm       DOCKER_ARCH=arm        
   - DOCKER_TAG=amd64     DOCKER_ARCH=amd64    LATEST=true
   
