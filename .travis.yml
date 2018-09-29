@@ -5,10 +5,11 @@ services:
 
 script:
 # setup QEMU
-- >
-  if [ "$DOCKER_ARCH" != "arm64v8" ]; then
-    docker run --rm --privileged multiarch/qemu-user-static:register --reset
-  fi
+# - >
+#   if [ "$DOCKER_ARCH" != "arm64v8" ]; then
+#     docker run --rm --privileged multiarch/qemu-user-static:register --reset
+#   fi
+- docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build images
 - docker build -t ddns:$DOCKER_TAG -f Dockerfile.$DOCKER_ARCH .
 # push images
