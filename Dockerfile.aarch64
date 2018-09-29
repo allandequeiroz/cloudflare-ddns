@@ -7,6 +7,7 @@ COPY ./conf/sources.list /etc/apt/sources.list
 
 # Install dependencies
 SHELL ["/bin/bash", "-c"]
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get install vim curl cron python2.7-dev python-pip -y
 RUN ln -sf /usr/bin/python2.7 /usr/bin/python
