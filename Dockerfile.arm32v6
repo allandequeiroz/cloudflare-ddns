@@ -1,0 +1,18 @@
+FROM resin/rpi-raspbian
+
+MAINTAINER Allan de Queiroz <allandequeiroz@gmail.com>
+
+# Install dependencies
+RUN apt-get update
+RUN apt-get install vim curl cron python2.7-dev python-pip -y
+RUN ln -sf /usr/bin/python2.7 /usr/bin/python
+RUN pip install requests
+RUN pip install pyyaml
+
+# Cloudflare updating setup
+RUN mkdir -p /root/ddns
+COPY ./conf/cloudflare_ddns.py /root/ddns
+COPY ./conf/root /var/spool/cron/crontabs/
+RUN chmod 0600 /var/spool/cron/crontabs/root
+CMD /usr/sbin/cron -f
+
