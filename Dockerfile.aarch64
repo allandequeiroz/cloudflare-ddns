@@ -1,9 +1,6 @@
-FROM aarch64/debian
+FROM arm64v8/debian
 
 MAINTAINER Allan de Queiroz <allandequeiroz@gmail.com>
-
-# Fixing source list
-COPY ./conf/sources.list /etc/apt/sources.list
 
 # Install dependencies
 SHELL ["/bin/bash", "-c"]
