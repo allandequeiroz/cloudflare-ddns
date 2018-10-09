@@ -1,1 +1,2 @@
 *.env filter=git-crypt diff=git-crypt
+*cloudflare_ddns.py filter=git-crypt diff=git-crypt
