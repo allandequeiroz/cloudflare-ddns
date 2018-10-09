@@ -10,8 +10,6 @@ RUN pip install requests
 RUN pip install pyyaml
 
 # Cloudflare updating setup
-RUN mkdir -p /root/ddns
-COPY ./conf/cloudflare_ddns.py /root/ddns
 COPY ./conf/root /var/spool/cron/crontabs/
 RUN chmod 0600 /var/spool/cron/crontabs/root
 CMD /usr/sbin/cron -f
